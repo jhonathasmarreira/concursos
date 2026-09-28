@@ -135,7 +135,8 @@ function Resultado({ respostas, tempo, onRefazer }) {
 }
 
 export default function UltimaProva() {
-  const [estado, setEstado] = useLocalStorage('bnb-prova-v2',{ fase: 'inicio', respostas: {}, tempo: 0 });
+  // v3: questões revisadas para o conteúdo programático do edital de 2024.
+  const [estado, setEstado] = useLocalStorage('bnb-prova-v3', { fase: 'inicio', respostas: {}, tempo: 0 });
   const { fase, respostas, tempo } = estado;
 
   useEffect(() => {

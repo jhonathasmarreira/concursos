@@ -3,7 +3,7 @@
 App React (Vite) para estudar para os concursos do Banco do Nordeste. No topo do menu, escolha o nível:
 
 ### Nível médio: Analista Bancário
-- **Matérias**: 7 matérias com 40 perguntas de múltipla escolha cada (280 no total, estilo Cesgranrio), divididas em 8 tópicos de 5 perguntas. Cada tópico tem seu material de estudo, exibido junto de cada pergunta.
+- **Matérias**: 9 matérias alinhadas ao conteúdo programático do edital de 2024 (Anexo IV), com 40 a 61 perguntas de múltipla escolha cada (391 no total, estilo Cesgranrio), divididas em tópicos de 5 perguntas. Conhecimentos básicos: Língua Portuguesa e Matemática/Raciocínio Lógico. Conhecimentos bancários: SFN, Operações de Crédito, Serviços Bancários, Aspectos Jurídicos, Banco do Nordeste, Ética/Integridade/ASG (com o Código de Conduta do BNB) e Atualidades. Cada tópico tem seu material de estudo, exibido junto de cada pergunta.
 - **Última prova (2024)**: simulado de 30 questões na proporção e com os pesos da prova Cesgranrio de 2024, com correção e nota no final.
 
 ### Nível superior: Especialista Técnico em TI

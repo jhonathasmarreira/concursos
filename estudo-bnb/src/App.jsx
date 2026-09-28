@@ -7,13 +7,25 @@ import MateriaView from './components/MateriaView.jsx';
 import UltimaProva from './components/UltimaProva.jsx';
 import ProvaSuperior from './components/ProvaSuperior.jsx';
 
+// O conteúdo do nível médio foi revisado (v2) e os ids das perguntas mudaram de sentido.
+// Na migração, só as respostas do nível superior (ids "sup-...") são aproveitadas.
+function respostasMigradas() {
+  try {
+    const antigas = JSON.parse(localStorage.getItem('bnb-estudo-respostas') || '{}');
+    return Object.fromEntries(Object.entries(antigas).filter(([id]) => id.startsWith('sup-')));
+  } catch {
+    return {};
+  }
+}
+const respostasIniciais = respostasMigradas();
+
 export default function App() {
   const [nivelId, setNivelId] = useLocalStorage('bnb-nivel', 'medio');
   const nivel = niveis[nivelId] ?? niveis.medio;
   const [tela, setTela] = useState({ tipo: 'inicio' });
   const [menuAberto, setMenuAberto] = useState(false);
   // respostas de estudo dos dois níveis: { [perguntaId]: indiceEscolhido } (os ids não se repetem entre níveis)
-  const [respostas, setRespostas] = useLocalStorage('bnb-estudo-respostas', {});
+  const [respostas, setRespostas] = useLocalStorage('bnb-estudo-respostas-v2', respostasIniciais);
 
   const navegar = (novaTela) => {
     setTela(novaTela);

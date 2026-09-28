@@ -12,7 +12,7 @@ export const infoConcurso = {
   escolaridade: 'Nível médio',
   estrutura: [
     { disciplina: 'Língua Portuguesa', questoes: 10, peso: 1 },
-    { disciplina: 'Matemática', questoes: 10, peso: 1 },
+    { disciplina: 'Matemática/Raciocínio Lógico e Quantitativo', questoes: 10, peso: 1 },
     { disciplina: 'Conhecimentos Bancários', questoes: 40, peso: 2 },
   ],
   situacaoAtual:
@@ -132,16 +132,11 @@ const questoesOriginais = [
   {
     id: 9,
     disciplina: MAT,
-    enunciado: 'A negação lógica da proposição "Se chove, então a agência fecha" é:',
-    alternativas: [
-      'Se não chove, então a agência não fecha.',
-      'Chove e a agência não fecha.',
-      'Não chove ou a agência fecha.',
-      'Não chove e a agência fecha.',
-      'Se a agência fecha, então chove.',
-    ],
-    correta: 1,
-    explicacao: 'A negação de "Se P, então Q" é "P e não Q": chove e a agência não fecha.',
+    enunciado:
+      'O lucro de R$ 12.000,00 de uma empresa será dividido entre três sócios em partes diretamente proporcionais aos capitais investidos: R$ 20 mil, R$ 30 mil e R$ 50 mil. O sócio que investiu mais receberá:',
+    alternativas: ['R$ 2.400,00', 'R$ 3.600,00', 'R$ 4.000,00', 'R$ 6.000,00', 'R$ 5.000,00'],
+    correta: 3,
+    explicacao: 'Total de capital = 100 mil. O maior sócio tem 50% → 50% de 12.000 = R$ 6.000,00.',
   },
   {
     id: 10,
@@ -187,17 +182,11 @@ const questoesOriginais = [
   {
     id: 13,
     disciplina: CB,
-    enunciado: 'Em relação ao Fundo Garantidor de Créditos (FGC), é correto afirmar que:',
-    alternativas: [
-      'garante até R$ 250 mil por CPF/CNPJ por instituição ou conglomerado, com teto global de R$ 1 milhão a cada 4 anos',
-      'é uma autarquia federal vinculada ao Banco Central',
-      'cobre integralmente aplicações em ações e debêntures',
-      'garante até R$ 1 milhão por aplicação, sem limite por CPF',
-      'cobre títulos públicos federais negociados no Tesouro Direto',
-    ],
-    correta: 0,
+    enunciado: 'Na análise de crédito, o "C" que se refere às garantias oferecidas pelo tomador é o:',
+    alternativas: ['caráter', 'capacidade', 'capital', 'colateral', 'condições'],
+    correta: 3,
     explicacao:
-      'O FGC é entidade privada que garante até R$ 250 mil por CPF/CNPJ por instituição/conglomerado, com teto de R$ 1 milhão a cada 4 anos.',
+      'Colateral = garantias. Caráter é a intenção de pagar; capacidade, a habilidade de gerar recursos; capital, a situação patrimonial; condições, os fatores externos.',
   },
   {
     id: 14,
@@ -262,64 +251,70 @@ const questoesOriginais = [
   {
     id: 19,
     disciplina: CB,
-    enunciado: 'Quanto à aplicação do Código de Defesa do Consumidor às instituições financeiras, é correto afirmar que:',
+    enunciado: 'A duplicata é título de crédito:',
     alternativas: [
-      'não se aplica, pois bancos são regidos exclusivamente pelo CMN',
-      'aplica-se somente a cartões de crédito',
-      'aplica-se às instituições financeiras, conforme a Súmula 297 do STJ',
-      'aplica-se apenas a clientes pessoa jurídica',
-      'aplica-se apenas a bancos privados',
+      'causal, emitido pelo vendedor ou prestador de serviços com base em fatura de venda mercantil ou de prestação de serviços',
+      'abstrato, emitido pelo comprador como promessa de pagamento',
+      'que representa ordem de pagamento à vista dada contra um banco',
+      'público, emitido pelo Tesouro Nacional',
+      'sem qualquer vínculo com a operação que lhe deu origem',
     ],
-    correta: 2,
-    explicacao: 'Súmula 297 do STJ: "O Código de Defesa do Consumidor é aplicável às instituições financeiras."',
+    correta: 0,
+    explicacao:
+      'A duplicata (Lei 5.474/1968) é título causal, sacado pelo credor com base na fatura. A ordem de pagamento à vista contra banco é o cheque; a promessa de pagamento é a nota promissória.',
   },
   {
     id: 20,
     disciplina: CB,
-    enunciado: 'Sobre o consórcio, é correto afirmar que:',
-    alternativas: [
-      'é fiscalizado pela CVM, por ser um valor mobiliário',
-      'cobra juros compostos sobre o valor da carta de crédito',
-      'é uma modalidade de autofinanciamento em grupo, administrada por administradora autorizada e fiscalizada pelo Banco Central',
-      'garante a contemplação imediata de todos os participantes',
-      'tem cobertura do FGC até R$ 250 mil',
-    ],
-    correta: 2,
+    enunciado:
+      'A operação em que o banco antecipa ao cliente o valor de duplicatas a vencer, cobrando juros e mantendo o direito de regresso contra o cliente caso o sacado não pague, denomina-se:',
+    alternativas: ['desconto de títulos', 'conta garantida', 'capital de giro', 'crédito direto ao consumidor', 'arrendamento mercantil'],
+    correta: 0,
     explicacao:
-      'Consórcio (Lei nº 11.795/2008) é autofinanciamento em grupo; não há juros, mas taxa de administração. A fiscalização é do Banco Central.',
+      'No desconto, o banco adianta o valor de recebíveis. Se o devedor do título não pagar, o banco cobra do cliente que descontou.',
   },
   {
     id: 21,
     disciplina: CB,
-    enunciado: 'Nos fundos de investimento abertos sujeitos ao "come-cotas", a antecipação semestral do IR ocorre nos meses de:',
-    alternativas: ['janeiro e julho', 'março e setembro', 'maio e novembro', 'junho e dezembro', 'abril e outubro'],
-    correta: 2,
-    explicacao: 'O come-cotas ocorre no último dia útil de maio e de novembro.',
+    enunciado: 'Os títulos de capitalização:',
+    alternativas: [
+      'são fiscalizados pela Susep e combinam formação de capital com sorteios, podendo o resgate antecipado ser inferior ao valor pago',
+      'são garantidos pelo FGC até R$ 250 mil',
+      'são regulados pela CVM e rendem sempre mais que a poupança',
+      'não permitem resgate em nenhuma hipótese',
+      'são títulos públicos federais',
+    ],
+    correta: 0,
+    explicacao: 'Capitalização: normas do CNSP e fiscalização da Susep. Parte do valor pago custeia sorteios e despesas.',
   },
   {
     id: 22,
     disciplina: CB,
-    enunciado: 'As Letras de Crédito do Agronegócio (LCA) caracterizam-se por:',
+    enunciado: 'A linha BNDES Finame destina-se, principalmente, a:',
     alternativas: [
-      'serem emitidas por empresas rurais, sem garantia do FGC',
-      'serem isentas de Imposto de Renda para pessoas físicas e lastreadas em créditos do agronegócio',
-      'terem tributação de 22,5% independentemente do prazo',
-      'serem títulos públicos emitidos pelo Tesouro Nacional',
-      'serem ações de empresas do agronegócio negociadas em bolsa',
+      'financiar habitação popular',
+      'financiar a produção e a aquisição de máquinas e equipamentos novos, de fabricação nacional, credenciados no BNDES',
+      'conceder crédito pessoal sem destinação específica',
+      'financiar a importação de bens de consumo',
+      'custear o seguro-desemprego',
     ],
     correta: 1,
-    explicacao:
-      'LCA é título emitido por instituição financeira, lastreado em créditos do agronegócio, isento de IR para PF e coberto pelo FGC.',
+    explicacao: 'Finame = máquinas e equipamentos novos e nacionais. O seguro-desemprego é custeado pelo FAT.',
   },
   {
     id: 23,
     disciplina: CB,
-    enunciado:
-      'Um cliente deseja montar uma reserva de emergência com baixa volatilidade e liquidez diária em títulos públicos. O título mais adequado é o:',
-    alternativas: ['Tesouro Prefixado 2031', 'Tesouro IPCA+ 2045', 'Tesouro Selic', 'Tesouro Renda+', 'Tesouro Educa+'],
+    enunciado: 'Segundo o Código de Conduta Ética e Integridade do Banco do Nordeste, podem ser aceitos brindes que:',
+    alternativas: [
+      'tenham qualquer valor, desde que oferecidos por clientes antigos',
+      'sejam oferecidos pela mesma empresa a cada três meses',
+      'tenham valor unitário inferior a 1% do teto remuneratório constitucional e sejam distribuídos de forma generalizada, como propaganda ou em datas comemorativas',
+      'sejam entregues em dinheiro, em valor baixo',
+      'sejam oferecidos por fornecedor com contrato em análise pelo empregado',
+    ],
     correta: 2,
     explicacao:
-      'O Tesouro Selic (LFT) é pós-fixado à Selic, tem baixa oscilação de preço e liquidez diária — ideal para reserva de emergência.',
+      'Art. 44 do Código. Além disso, não se aceita brinde da mesma pessoa ou empresa em intervalo menor que 12 meses.',
   },
   {
     id: 24,
@@ -361,26 +356,25 @@ const questoesOriginais = [
   {
     id: 27,
     disciplina: CB,
-    enunciado:
-      'Segundo a Circular BCB nº 3.978/2020, devem ser comunicadas ao Coaf as operações de depósito, aporte ou saque em espécie de valor igual ou superior a:',
-    alternativas: ['R$ 2.000,00', 'R$ 10.000,00', 'R$ 30.000,00', 'R$ 50.000,00', 'R$ 100.000,00'],
+    enunciado: 'A Estratégia ASG do Banco do Nordeste organiza-se em dois eixos de atuação. São eles:',
+    alternativas: [
+      'maximizar o lucro dos acionistas e reduzir o crédito rural',
+      'captar recursos no exterior e distribuir dividendos',
+      'ampliar a rede de agências e reduzir o microcrédito',
+      'apoiar a sustentabilidade social e ambiental e a transição para uma economia de baixo carbono; e operar empresarialmente de forma ecoeficiente e socialmente responsável',
+      'financiar exclusivamente grandes exportadores e concentrar o crédito nas capitais',
+    ],
     correta: 3,
-    explicacao: 'Operações em espécie a partir de R$ 50 mil são de comunicação obrigatória ao Coaf.',
+    explicacao: 'São os dois eixos da Estratégia ASG, que se desdobram em 10 linhas de ação alinhadas aos ODS.',
   },
   {
     id: 28,
     disciplina: CB,
-    enunciado: 'O sigilo das operações das instituições financeiras é disciplinado pela:',
-    alternativas: [
-      'Lei nº 9.613/1998',
-      'Lei Complementar nº 105/2001',
-      'Lei nº 13.709/2018',
-      'Lei nº 4.595/1964',
-      'Lei nº 8.078/1990',
-    ],
-    correta: 1,
-    explicacao:
-      'LC 105/2001 = sigilo bancário. 9.613/98 = lavagem de dinheiro; 13.709/18 = LGPD; 4.595/64 = Lei do SFN; 8.078/90 = CDC.',
+    enunciado:
+      'O risco de perdas resultantes de falhas, deficiências ou inadequação de processos internos, pessoas e sistemas, ou de eventos externos, denomina-se risco:',
+    alternativas: ['de crédito', 'de mercado', 'operacional', 'de liquidez', 'sistêmico'],
+    correta: 2,
+    explicacao: 'É a definição de risco operacional, que inclui o risco legal (Resolução CMN 4.557/2017).',
   },
   {
     id: 29,
@@ -390,7 +384,7 @@ const questoesOriginais = [
     alternativas: [
       'Resolução CMN nº 4.945/2021',
       'Lei nº 7.357/1985',
-      'Circular BCB nº 3.978/2020',
+      'Resolução CMN nº 4.893/2021',
       'Lei Complementar nº 105/2001',
       'Resolução CVM nº 175/2022',
     ],

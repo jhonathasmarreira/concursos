@@ -14,8 +14,8 @@ export const niveis = {
     materias,
     rotuloProva: 'Última prova (2024)',
     passos: [
-      'Escolha uma matéria no menu.',
-      'Cada matéria tem 40 perguntas de múltipla escolha (estilo Cesgranrio), divididas em 8 tópicos, e cada pergunta vem com o material de estudo do seu tópico.',
+      'Escolha uma matéria no menu. Elas seguem o conteúdo programático do edital de 2024: conhecimentos básicos e conhecimentos bancários.',
+      'Cada matéria tem de 40 a 60 perguntas de múltipla escolha (estilo Cesgranrio), divididas em tópicos, e cada pergunta vem com o material de estudo do seu tópico.',
       'Leia o material, responda e veja a explicação.',
       'No fim, faça o simulado da última prova (2024) e confira sua nota na correção.',
     ],
